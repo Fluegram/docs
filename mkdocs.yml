@@ -1,4 +1,84 @@
-site_name: My Docs
+site_name: Fluegram
+
+repo_url: https://github.com/Fluegram/Fluegram
+repo_name: Fluegram/Fluegram
 
 theme:
   name: material
+
+  icon:
+    repo: fontawesome/brands/github-alt
+
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.expand
+    - navigation.indexes
+    - navigation.sections
+    - toc.follow
+    - toc.integrate
+    - content.tabs.link
+    - content.code.annotate
+    - search.highlight
+    - search.share
+    - search.suggest
+    - announce.dismiss
+    - header.autohide
+
+
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate 
+      primary: red
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+plugins:
+  - search:
+      prebuild_index: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      auto_title: true
+      linenums_style: table
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
